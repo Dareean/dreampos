@@ -1,0 +1,95 @@
+# Production .htaccess
+# Copy this to .htaccess when deploying to production
+# Remove or update RewriteBase for production
+
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Update this for your deployment
+# For root domain: RewriteBase /
+# For subdirectory: RewriteBase /ims/
+RewriteBase /
+
+# Default page
+RewriteRule ^$ signin.php [L]
+
+# Security Headers
+<IfModule mod_headers.c>
+    # Prevent clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # XSS Protection
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Prevent MIME type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # Referrer Policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Remove server signature
+    Header unset Server
+    Header unset X-Powered-By
+</IfModule>
+
+# Force HTTPS (uncomment in production with SSL)
+# <IfModule mod_rewrite.c>
+#     RewriteCond %{HTTPS} off
+#     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# </IfModule>
+
+# Disable directory browsing
+Options -Indexes
+
+# Protect sensitive files
+<FilesMatch "^(initialize\.php|config\.php|\.env|composer\.json|\.git)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Protect .htaccess file
+<Files .htaccess>
+    Order allow,deny
+    Deny from all
+</Files>
+
+# PHP Security Settings
+<IfModule mod_php7.c>
+    php_flag display_errors off
+    php_flag log_errors on
+    php_value error_log /tmp/php_errors.log
+    php_flag expose_php off
+    php_value upload_max_filesize 10M
+    php_value post_max_size 10M
+    php_value max_execution_time 300
+    php_value memory_limit 256M
+</IfModule>
+
+# Browser Caching
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/pdf "access plus 1 month"
+</IfModule>
+
+# Compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+    AddOutputFilterByType DEFLATE application/javascript application/json
+</IfModule>
+
+# Protect database folder
+<IfModule mod_rewrite.c>
+    RewriteRule ^Database/ - [F,L]
+</IfModule>
+
+# Custom Error Pages (optional - create these pages)
+# ErrorDocument 404 /error-404.html
+# ErrorDocument 500 /error-500.html
+# ErrorDocument 403 /error-403.html

@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteBase /ims/
+RewriteRule ^$ signin.php [L]

@@ -1,0 +1,42 @@
+# Deployment Files
+vendor/
+node_modules/
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+error_log
+access_log
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+*.bak
+*.swp
+*~
+
+# Upload folders (optional - remove if you want to track uploads)
+# assets/img/brand/*
+# !assets/img/brand/.gitkeep
+
+# Database backups
+*.sql.gz
+*.sql.zip
+backup/
+
+# Config files with sensitive data (if you create separate config)
+config.local.php
+.htpasswd

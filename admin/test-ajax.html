@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test AJAX</title>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <button id="deleteButton" data-id="1">Delete User</button>
+    <script>
+        $(document).ready(function () {
+            $("#deleteButton").click(function () {
+                var id = $(this).data("id");
+                console.log("Button clicked, ID:", id);
+                setTimeout(function () {
+                    $.ajax({
+                        url: 'deleteuser1.php', // Replace with the correct URL
+                        type: 'POST',
+                        data: { id: id },
+                        dataType: 'json',
+                    }), 1000
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
