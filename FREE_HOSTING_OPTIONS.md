@@ -9,6 +9,7 @@ Perbandingan platform gratis untuk deploy aplikasi PHP seperti IMS.
 **Website:** https://railway.app
 
 **Kelebihan:**
+
 - ✅ Modern dashboard (seperti Vercel)
 - ✅ Git-based deployment otomatis
 - ✅ Support PHP & MySQL native
@@ -19,6 +20,7 @@ Perbandingan platform gratis untuk deploy aplikasi PHP seperti IMS.
 - ✅ CLI tools
 
 **Kekurangan:**
+
 - ⚠️ Free tier terbatas: $5 credit/bulan (~500 jam)
 - ⚠️ Setelah credit habis, app akan sleep
 
@@ -33,6 +35,7 @@ Perbandingan platform gratis untuk deploy aplikasi PHP seperti IMS.
 **Website:** https://render.com
 
 **Kelebihan:**
+
 - ✅ Free tier permanent (dengan batasan)
 - ✅ Git-based deployment
 - ✅ Support PHP via Docker
@@ -41,6 +44,7 @@ Perbandingan platform gratis untuk deploy aplikasi PHP seperti IMS.
 - ✅ Custom domains
 
 **Kekurangan:**
+
 - ⚠️ Tidak support MySQL gratis (hanya PostgreSQL)
 - ⚠️ Perlu Docker configuration
 - ⚠️ Free tier: app sleep setelah 15 menit idle
@@ -50,6 +54,7 @@ Perbandingan platform gratis untuk deploy aplikasi PHP seperti IMS.
 **Difficulty:** ⭐⭐⭐
 
 **Cara Deploy:**
+
 ```dockerfile
 # Perlu buat Dockerfile
 FROM php:8.2-apache
@@ -64,6 +69,7 @@ COPY . /var/www/html/
 **Website:** https://infinityfree.net
 
 **Kelebihan:**
+
 - ✅ 100% gratis (unlimited)
 - ✅ PHP & MySQL included
 - ✅ cPanel (mudah digunakan)
@@ -72,6 +78,7 @@ COPY . /var/www/html/
 - ✅ No credit card needed
 
 **Kekurangan:**
+
 - ❌ Ada iklan di website Anda
 - ❌ Performa terbatas
 - ❌ Tidak ada Git deployment
@@ -82,6 +89,7 @@ COPY . /var/www/html/
 **Difficulty:** ⭐⭐
 
 **Cara Deploy:**
+
 1. Sign up di InfinityFree
 2. Create account & domain
 3. Upload via File Manager atau FTP
@@ -96,6 +104,7 @@ COPY . /var/www/html/
 **Website:** https://www.000webhost.com
 
 **Kelebihan:**
+
 - ✅ Gratis permanent
 - ✅ PHP & MySQL
 - ✅ 300 MB storage
@@ -103,6 +112,7 @@ COPY . /var/www/html/
 - ✅ cPanel-like interface
 
 **Kekurangan:**
+
 - ❌ Bandwidth terbatas (3 GB/bulan)
 - ❌ Sleep jika tidak ada traffic 1 jam
 - ❌ Performa lambat
@@ -118,6 +128,7 @@ COPY . /var/www/html/
 **Website:** https://vercel.com
 
 **Kenapa tidak cocok:**
+
 - ❌ Tidak support PHP tradisional
 - ❌ Hanya support Serverless Functions (Node.js, Python, Go)
 - ❌ Tidak ada MySQL
@@ -132,6 +143,7 @@ COPY . /var/www/html/
 **Website:** https://netlify.com
 
 **Kenapa tidak cocok:**
+
 - ❌ Hanya static sites
 - ❌ Tidak support PHP server-side
 - ❌ Tidak ada MySQL
@@ -140,17 +152,17 @@ COPY . /var/www/html/
 
 ## 📊 Perbandingan Lengkap
 
-| Platform | Gratis? | PHP | MySQL | Git Deploy | HTTPS | Dashboard | Like Vercel? |
-|----------|---------|-----|-------|------------|-------|-----------|--------------|
-| **Railway** | $5/mo | ✅ | ✅ | ✅ | ✅ | Modern | ⭐⭐⭐⭐⭐ |
-| **Render** | Yes* | ✅ | ❌† | ✅ | ✅ | Modern | ⭐⭐⭐⭐ |
-| **InfinityFree** | Yes | ✅ | ✅ | ❌ | ✅ | cPanel | ⭐⭐ |
-| **000webhost** | Yes | ✅ | ✅ | ❌ | ✅ | Basic | ⭐⭐ |
-| **Heroku** | No | ✅ | Add-on | ✅ | ✅ | Good | ⭐⭐⭐⭐ |
-| **Vercel** | Yes | ❌ | ❌ | ✅ | ✅ | Modern | ❌ |
-| **Netlify** | Yes | ❌ | ❌ | ✅ | ✅ | Modern | ❌ |
+| Platform         | Gratis? | PHP | MySQL  | Git Deploy | HTTPS | Dashboard | Like Vercel? |
+| ---------------- | ------- | --- | ------ | ---------- | ----- | --------- | ------------ |
+| **Railway**      | $5/mo   | ✅  | ✅     | ✅         | ✅    | Modern    | ⭐⭐⭐⭐⭐   |
+| **Render**       | Yes\*   | ✅  | ❌†    | ✅         | ✅    | Modern    | ⭐⭐⭐⭐     |
+| **InfinityFree** | Yes     | ✅  | ✅     | ❌         | ✅    | cPanel    | ⭐⭐         |
+| **000webhost**   | Yes     | ✅  | ✅     | ❌         | ✅    | Basic     | ⭐⭐         |
+| **Heroku**       | No      | ✅  | Add-on | ✅         | ✅    | Good      | ⭐⭐⭐⭐     |
+| **Vercel**       | Yes     | ❌  | ❌     | ✅         | ✅    | Modern    | ❌           |
+| **Netlify**      | Yes     | ❌  | ❌     | ✅         | ✅    | Modern    | ❌           |
 
-*Render free tier: app sleep setelah idle  
+\*Render free tier: app sleep setelah idle  
 †Render: PostgreSQL only (gratis)
 
 ---
@@ -158,21 +170,27 @@ COPY . /var/www/html/
 ## 🎯 Rekomendasi Berdasarkan Kebutuhan
 
 ### Untuk Developer (Modern Experience):
+
 **→ Railway.app** ([Panduan](DEPLOY_RAILWAY.md))
+
 - Git-based deployment
 - Auto-deploy
 - Modern dashboard
 - Worth it untuk $5/bulan
 
 ### Untuk Testing/Demo (100% Gratis):
+
 **→ InfinityFree**
+
 - Unlimited (dengan batasan performa)
 - Mudah digunakan
 - Toleransi iklan
 
 ### Untuk Production (Bayar):
+
 **→ Hostinger** ($2/mo)
 **→ Niagahoster** (Rp 10rb/mo)
+
 - Reliable
 - Support bagus
 - No sleep time
@@ -201,6 +219,7 @@ COPY . /var/www/html/
 ## 💡 Tips Memilih Platform
 
 ### Pilih Railway jika:
+
 - ✅ Mau experience seperti Vercel
 - ✅ Git-based deployment
 - ✅ Rela bayar sedikit ($5/mo)
@@ -208,12 +227,14 @@ COPY . /var/www/html/
 - ✅ Auto-deploy
 
 ### Pilih InfinityFree jika:
+
 - ✅ 100% gratis mutlak
 - ✅ Tidak masalah dengan iklan
 - ✅ Untuk portfolio/testing
 - ✅ Tidak butuh performa tinggi
 
 ### Pilih Hosting Berbayar jika:
+
 - ✅ Production app
 - ✅ Butuh reliability
 - ✅ No downtime

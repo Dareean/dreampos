@@ -5,6 +5,7 @@
 Railway adalah platform modern yang support PHP dengan pengalaman deploy seperti Vercel.
 
 ### ✨ Fitur:
+
 - Git-based deployment
 - Auto-deploy dari GitHub
 - MySQL database included
@@ -19,11 +20,13 @@ Railway adalah platform modern yang support PHP dengan pengalaman deploy seperti
 ### 1️⃣ Persiapan
 
 #### A. Buat akun Railway
+
 1. Buka: https://railway.app
 2. **Sign Up** dengan GitHub (recommended)
 3. Verify email
 
 #### B. Pastikan code di GitHub
+
 ```bash
 # Sudah selesai! Code Anda sudah di GitHub ✓
 # Repository: https://github.com/Dareean/dreampos
@@ -32,6 +35,7 @@ Railway adalah platform modern yang support PHP dengan pengalaman deploy seperti
 ### 2️⃣ Deploy Project
 
 #### A. Create New Project
+
 1. Login ke Railway dashboard
 2. Klik **"New Project"**
 3. Pilih **"Deploy from GitHub repo"**
@@ -42,6 +46,7 @@ Railway adalah platform modern yang support PHP dengan pengalaman deploy seperti
 Railway akan otomatis detect PHP dan mulai deploy!
 
 #### B. Add MySQL Database
+
 1. Di Railway dashboard project Anda
 2. Klik **"New"** → **"Database"** → **"Add MySQL"**
 3. Tunggu MySQL service deploy
@@ -152,6 +157,7 @@ Railway sudah auto-inject MySQL variables, jadi biasanya tidak perlu manual!
 ### 7️⃣ Test Application
 
 Buka URL Railway Anda dan test:
+
 ```
 https://your-app.up.railway.app/login.php
 ```
@@ -173,6 +179,7 @@ $db_port = getenv('MYSQLPORT');
 
 **Fix 2: Railway Service Connection**
 Di Railway dashboard:
+
 1. Klik PHP service
 2. Tab "Settings" → "Services"
 3. Pastikan MySQL service ter-connected
@@ -180,6 +187,7 @@ Di Railway dashboard:
 ### Error: "Port already in use"
 
 Railway menyediakan $PORT variable. Pastikan `nixpacks.toml` menggunakan `$PORT`:
+
 ```toml
 cmd = "php -S 0.0.0.0:$PORT -t ."
 ```
@@ -187,6 +195,7 @@ cmd = "php -S 0.0.0.0:$PORT -t ."
 ### Database tidak ter-import
 
 Gunakan Railway CLI untuk import langsung:
+
 ```bash
 railway run mysql -h $MYSQLHOST -P $MYSQLPORT -u $MYSQLUSER -p$MYSQLPASSWORD $MYSQLDATABASE < Database/ims.sql
 ```
@@ -194,6 +203,7 @@ railway run mysql -h $MYSQLHOST -P $MYSQLPORT -u $MYSQLUSER -p$MYSQLPASSWORD $MY
 ### Assets/Images tidak load
 
 Check `base_url` setting. Pastikan auto-detect Railway domain:
+
 ```php
 $railway_url = getenv('RAILWAY_PUBLIC_DOMAIN');
 $base_url = $railway_url ? "https://{$railway_url}/" : 'http://localhost/ims/';
@@ -204,6 +214,7 @@ $base_url = $railway_url ? "https://{$railway_url}/" : 'http://localhost/ims/';
 ## 💰 Free Tier Limits
 
 Railway Free Tier:
+
 - ✅ $5 credit per bulan
 - ✅ ~500 execution hours
 - ✅ Unlimited projects
@@ -211,6 +222,7 @@ Railway Free Tier:
 - ⚠️ Setelah credit habis, service akan sleep
 
 **Tips menghemat credit:**
+
 - Remove unused services
 - Deploy hanya saat perlu
 - Gunakan untuk development/testing
@@ -235,6 +247,7 @@ git push
 ## 📊 Monitoring
 
 Railway dashboard menyediakan:
+
 - ✅ Deployment logs
 - ✅ Resource usage
 - ✅ Metrics
@@ -247,6 +260,7 @@ Access via: https://railway.app/dashboard
 ## ⚡ Performance Tips
 
 1. **Enable Caching**
+
    ```php
    // Tambahkan caching untuk query
    ```
