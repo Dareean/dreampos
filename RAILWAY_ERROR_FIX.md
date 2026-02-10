@@ -1,6 +1,7 @@
 # Fix Railway "workspaceId" Error
 
 ## Error yang Muncul:
+
 ```
 Error: You must specify a workspaceId to create a project
 ```
@@ -94,8 +95,9 @@ Railway git URL didapat setelah create project via CLI.
 ## 🐛 Kenapa Error Ini Terjadi?
 
 Error ini biasanya terjadi karena:
+
 1. ❌ **Akun Railway baru** yang belum fully provisioned
-2. ❌ **Browser cache issue** 
+2. ❌ **Browser cache issue**
 3. ❌ **Workspace belum dibuat** secara otomatis
 4. ❌ **Session expired** di Railway
 
