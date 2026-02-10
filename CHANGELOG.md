@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Planned
+
 - REST API implementation
 - Mobile responsive improvements
 - Advanced reporting & analytics
@@ -17,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2026-02-10
 
 ### Added
+
 - Initial release
 - Product management (CRUD operations)
 - Brand management
@@ -43,6 +45,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Features by Module
 
 #### Admin Panel
+
 - Dashboard with overview statistics
 - Complete product CRUD operations
 - Brand management
@@ -54,6 +57,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Profile management
 
 #### User Panel
+
 - View products listing
 - View brands
 - View categories
@@ -63,6 +67,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Limited access based on role
 
 #### Authentication
+
 - User login
 - User registration
 - Password reset via email
@@ -70,6 +75,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Role-based access control
 
 ### Technical Implementations
+
 - PHP 7.4+ compatibility
 - MySQL/MariaDB database
 - Bootstrap 4 UI framework
@@ -83,6 +89,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - AJAX requests for dynamic content
 
 ### Documentation
+
 - README.md with complete project info
 - SETUP_GUIDE.md for installation
 - DEPLOYMENT_GUIDE.md (Bahasa Indonesia)
@@ -91,6 +98,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Environment configuration examples
 
 ### Security
+
 - Password hashing
 - SQL injection prevention
 - XSS protection
@@ -100,6 +108,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Input sanitization
 
 ### Configuration Files
+
 - .htaccess for URL rewriting
 - .gitignore for version control
 - .env.example for environment variables
@@ -108,6 +117,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.0] - Development
 
 ### Initial Development
+
 - Basic project structure
 - Database schema design
 - Core functionality implementation
@@ -117,6 +127,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 
 ### Legend
+
 - `Added` - New features
 - `Changed` - Changes in existing functionality
 - `Deprecated` - Soon-to-be removed features

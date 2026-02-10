@@ -3,11 +3,13 @@
 ## ⚠️ Penting: Mengapa Tidak Bisa di Vercel?
 
 **Vercel TIDAK mendukung PHP tradisional** seperti aplikasi ini. Vercel dirancang untuk:
+
 - Next.js, React, Vue
 - Serverless Functions (Node.js, Python, Go)
 - Static sites
 
 Aplikasi IMS ini membutuhkan:
+
 - ✅ PHP Server (Apache/Nginx)
 - ✅ MySQL Database
 - ✅ Session Management
@@ -18,6 +20,7 @@ Aplikasi IMS ini membutuhkan:
 ### Opsi 1: Hosting Tradisional (PALING MUDAH) ⭐ Recommended
 
 #### A. Hosting Gratis:
+
 1. **InfinityFree** (https://infinityfree.net)
    - ✅ PHP & MySQL gratis
    - ✅ Unlimited bandwidth
@@ -37,6 +40,7 @@ Aplikasi IMS ini membutuhkan:
    - ❌ Performa terbatas
 
 #### B. Hosting Berbayar (Lebih Stabil):
+
 1. **Niagahoster** (Indonesia) - Rp 10rb-50rb/bulan
 2. **Hostinger** - $2-5/bulan
 3. **Rumahweb** (Indonesia) - Rp 15rb-100rb/bulan
@@ -45,24 +49,28 @@ Aplikasi IMS ini membutuhkan:
 ### Opsi 2: Cloud Platform
 
 #### A. Railway.app (Mudah, Cocok untuk PHP)
+
 - ✅ Mendukung PHP & MySQL
 - ✅ Deploy via Git
 - ✅ Free tier: $5 credit/bulan
 - Link: https://railway.app
 
 #### B. Heroku (Popular)
+
 - ✅ Mendukung PHP
 - ✅ Add-on untuk MySQL (ClearDB)
 - ❌ No free tier lagi (mulai $5/bulan)
 - Link: https://www.heroku.com
 
 #### C. DigitalOcean App Platform
+
 - ✅ Full control
 - ✅ PHP & MySQL support
 - ❌ Minimal $5/bulan
 - Link: https://www.digitalocean.com
 
 ### Opsi 3: VPS (Untuk Advanced Users)
+
 - **DigitalOcean Droplets** - $4-6/bulan
 - **Vultr** - $3.5-6/bulan
 - **Linode** - $5/bulan
@@ -86,6 +94,7 @@ Aplikasi IMS ini membutuhkan:
 #### 1️⃣ Upload Files via FTP/cPanel
 
 **Via cPanel File Manager:**
+
 ```
 1. Login ke cPanel hosting Anda
 2. Buka "File Manager"
@@ -96,6 +105,7 @@ Aplikasi IMS ini membutuhkan:
 ```
 
 **Via FTP (FileZilla):**
+
 ```
 1. Download FileZilla Client
 2. Connect ke FTP hosting (host, username, password dari email hosting)
@@ -169,6 +179,7 @@ Buka: https://yourdomain.com/login.php
 ## 📋 Langkah Deployment ke Railway.app
 
 ### Prerequisites:
+
 - Git installed
 - GitHub account
 - Railway account
@@ -273,6 +284,7 @@ if(!defined('DB_NAME')) define('DB_NAME', getenv('DB_NAME') ?: "ims");
 ## 🛠️ Troubleshooting Deployment
 
 ### Error: "Cannot connect to database"
+
 ```
 ✅ Check: DB credentials di initialize.php
 ✅ Check: Database sudah di-import
@@ -281,6 +293,7 @@ if(!defined('DB_NAME')) define('DB_NAME', getenv('DB_NAME') ?: "ims");
 ```
 
 ### Error: "Page not found" / 404
+
 ```
 ✅ Check: File structure (index.php location)
 ✅ Check: .htaccess file (jika ada)
@@ -288,6 +301,7 @@ if(!defined('DB_NAME')) define('DB_NAME', getenv('DB_NAME') ?: "ims");
 ```
 
 ### Error: "Images not loading"
+
 ```
 ✅ Check: Folder permissions (755/777)
 ✅ Check: Path di database correct
@@ -295,6 +309,7 @@ if(!defined('DB_NAME')) define('DB_NAME', getenv('DB_NAME') ?: "ims");
 ```
 
 ### Error: "Session not working"
+
 ```
 ✅ Check: Session folder writable
 ✅ Check: php.ini session settings
@@ -305,29 +320,32 @@ if(!defined('DB_NAME')) define('DB_NAME', getenv('DB_NAME') ?: "ims");
 
 ## 📊 Comparison: Pilihan Platform
 
-| Platform | Harga | Mudah? | PHP Support | MySQL | Recommended |
-|----------|-------|--------|-------------|-------|-------------|
-| InfinityFree | Gratis | ⭐⭐⭐⭐⭐ | ✅ | ✅ | Untuk testing |
-| Niagahoster | 10rb/bln | ⭐⭐⭐⭐⭐ | ✅ | ✅ | ⭐ BEST (ID) |
-| Hostinger | $2/bln | ⭐⭐⭐⭐⭐ | ✅ | ✅ | ⭐ BEST (Global) |
-| Railway | $5/bln | ⭐⭐⭐ | ✅ | ✅ | Untuk developers |
-| Heroku | $5/bln | ⭐⭐⭐ | ✅ | ✅ (add-on) | Untuk developers |
-| VPS | $4-10/bln | ⭐⭐ | ✅ | ✅ | Advanced users |
-| Vercel | Gratis | ❌ | ❌ | ❌ | ❌ TIDAK COCOK |
+| Platform     | Harga     | Mudah?     | PHP Support | MySQL       | Recommended      |
+| ------------ | --------- | ---------- | ----------- | ----------- | ---------------- |
+| InfinityFree | Gratis    | ⭐⭐⭐⭐⭐ | ✅          | ✅          | Untuk testing    |
+| Niagahoster  | 10rb/bln  | ⭐⭐⭐⭐⭐ | ✅          | ✅          | ⭐ BEST (ID)     |
+| Hostinger    | $2/bln    | ⭐⭐⭐⭐⭐ | ✅          | ✅          | ⭐ BEST (Global) |
+| Railway      | $5/bln    | ⭐⭐⭐     | ✅          | ✅          | Untuk developers |
+| Heroku       | $5/bln    | ⭐⭐⭐     | ✅          | ✅ (add-on) | Untuk developers |
+| VPS          | $4-10/bln | ⭐⭐       | ✅          | ✅          | Advanced users   |
+| Vercel       | Gratis    | ❌         | ❌          | ❌          | ❌ TIDAK COCOK   |
 
 ---
 
 ## 🎯 Rekomendasi Saya
 
 ### Untuk Pemula / Testing:
+
 1. **InfinityFree** (gratis) - Paling mudah, ada cPanel
 2. **000webhost** (gratis) - Fast setup
 
 ### Untuk Production / Bisnis:
+
 1. **Niagahoster** (Indonesia) - Support Bahasa Indonesia, cPanel
 2. **Hostinger** (Global) - Murah, reliable, fast
 
 ### Untuk Developer:
+
 1. **Railway** - Modern, Git deployment
 2. **DigitalOcean** - Full control, scalable
 
@@ -355,7 +373,8 @@ if(!defined('DB_NAME')) define('DB_NAME', getenv('DB_NAME') ?: "ims");
 
 ---
 
-**Need Help?** 
+**Need Help?**
+
 - Check error logs di hosting
 - Contact hosting support
 - Google specific error messages

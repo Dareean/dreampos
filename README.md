@@ -9,6 +9,7 @@ Sistem Manajemen Inventori berbasis web yang dibangun dengan PHP dan MySQL. Apli
 ## ✨ Features
 
 ### 🎯 Core Features
+
 - **Product Management** - Tambah, edit, hapus, dan kelola produk dengan mudah
 - **Brand Management** - Kelola brand/merek produk
 - **Category & Subcategory** - Organisasi produk dengan kategori dan subkategori
@@ -19,6 +20,7 @@ Sistem Manajemen Inventori berbasis web yang dibangun dengan PHP dan MySQL. Apli
 - **Product Details** - View detail lengkap produk dengan gambar
 
 ### 🔐 Security Features
+
 - User Authentication & Authorization
 - Role-based Access Control (Admin & User)
 - Password Reset via Email
@@ -26,6 +28,7 @@ Sistem Manajemen Inventori berbasis web yang dibangun dengan PHP dan MySQL. Apli
 - SQL Injection Protection
 
 ### 📊 Dashboard
+
 - Dashboard Admin dengan statistik lengkap
 - Dashboard User untuk viewing data
 - Real-time data updates
@@ -70,6 +73,7 @@ C:\xampp\htdocs\ims
 ```
 
 **Manual:**
+
 - Buka XAMPP Control Panel
 - Start **Apache**
 - Start **MySQL**
@@ -100,6 +104,7 @@ base_url: http://localhost/ims/
 ### 5. Access Application
 
 Buka browser dan akses:
+
 - **Main App:** http://localhost/ims/
 - **Login:** http://localhost/ims/login.php
 - **Admin Panel:** http://localhost/ims/admin/
@@ -210,6 +215,7 @@ Edit `PHPMailer` settings untuk password reset functionality.
 ### Deployment Guide
 
 Lihat dokumentasi lengkap di:
+
 - **[DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md)** - Panduan deployment lengkap
 - **[SETUP_GUIDE.md](SETUP_GUIDE.md)** - Setup instructions
 - **[QUICK_REFERENCE.md](QUICK_REFERENCE.md)** - Quick reference
@@ -225,21 +231,25 @@ Lihat dokumentasi lengkap di:
 ## 🐛 Troubleshooting
 
 ### Cannot connect to database
+
 - Check MySQL service running
 - Verify credentials di `initialize.php`
 - Pastikan database `ims` exists
 
 ### Page not found (404)
+
 - Check Apache running
 - Verify project di `C:\xampp\htdocs\ims\`
 - Access via `http://localhost/ims/` bukan file path
 
 ### Blank page
+
 - Enable error reporting di `config.php`
 - Check PHP version (minimum 7.4)
 - Check Apache error logs
 
 ### Images not loading
+
 - Check folder permissions: `assets/img/`
 - Verify image paths di database
 - Set permissions to 755 or 777
@@ -247,6 +257,7 @@ Lihat dokumentasi lengkap di:
 ## 📊 Database Schema
 
 **Main Tables:**
+
 - `tbl_users` - System users
 - `tbl_brands` - Product brands
 - `tbl_categories` - Product categories
@@ -257,6 +268,7 @@ Lihat dokumentasi lengkap di:
 ## 🔐 Security
 
 ### Production Checklist
+
 - [ ] Change default passwords
 - [ ] Update `base_url` to production domain
 - [ ] Set `display_errors = Off`
@@ -271,6 +283,7 @@ Lihat dokumentasi lengkap di:
 ## 📦 Dependencies
 
 Managed via Composer:
+
 - `phpmailer/phpmailer` - Email functionality
 - `phpoffice/phpspreadsheet` - Excel operations
 - `ezyang/htmlpurifier` - HTML sanitization
@@ -295,6 +308,7 @@ Created with ❤️ for inventory management
 ## 📞 Support
 
 Jika ada pertanyaan atau issue:
+
 - Create issue di GitHub
 - Check [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md) untuk troubleshooting
 - Contact developer
